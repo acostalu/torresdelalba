@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Torres del Alba – Panadería & Rotisería</title>
-<link rel="icon" type="image/png" href="logo.png">
+<link rel="icon" type="image/png" href="logoclaro.png">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -366,13 +366,13 @@
 
 <!-- Theme toggle -->
 <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema claro/oscuro">
-  <div class="theme-toggle-knob" id="themeKnob">☀️</div>
+  <div class="theme-toggle-knob" id="themeKnob">☀︎</div>
 </button>
 
 <!-- ═══════════ INICIO ═══════════ -->
 <section id="sec-inicio" class="section active">
   <div id="hero">
-    <img src="logo.png" alt="Torres del Alba" class="hero-logo">
+    <img id="heroLogo" src="logoclaro.png" alt="Torres del Alba" class="hero-logo">
     <p class="hero-tagline">Panadería & Rotisería Artesanal</p>
     <div class="hero-divider"></div>
   </div>
@@ -535,7 +535,7 @@
 const reviews = [
   "Tremenda onda esta familia que atiende formidablemente, siempre con la mejor actitud y muy buenos panificados... ricos menúes para resolver los almuerzos. Somos vecinos de la cuadra y clientes de hace tiempo. Arriba esta familia trabajadora.",
   "Excelente panadería y rotisería, todo comida casera muy buena con muy cálida atención. Y los pan dulces de fin de año, ¡excelentes!",
-  "Excelente servicio, todo muy rico. Recomiendo 100%. No se van a arrepentir 😉",
+  "Excelente servicio, todo muy rico. Recomiendo 100%. No se van a arrepentir ;)",
   "Muy bueno. Primera vez que compro y tanto la atención como la mercadería es excelente. Va a ser mi panadería de preferencia cuando ande por este barrio.",
   "Excelente calidad, probamos las empanadas y estaban muy buenas, bien rellenas y sabrosas. Los muchachos muy amables atendiendo, que eso también es muy importante, super recomendable.",
   "Los mejores bizcochos de Montevideo!! Todos los productos excelentes, difícil elegir qué llevar. Excelente también para festejar un cumple o evento, los sándwiches y jesuitas, un placer. Los muchachos que atienden siempre con muy buena onda y simpatía."
@@ -592,14 +592,25 @@ setTimeout(initPill, 80);
 const html   = document.documentElement;
 const knob   = document.getElementById('themeKnob');
 const toggle = document.getElementById('themeToggle');
+const heroLogo = document.getElementById('heroLogo');
+const faviconLink = document.querySelector('link[rel="icon"]');
+
+function updateThemeAssets() {
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  if (heroLogo) heroLogo.src = isDark ? 'logooscuro.png' : 'logoclaro.png';
+  if (faviconLink) faviconLink.href = isDark ? 'logooscuro.png' : 'logoclaro.png';
+}
+
 const saved  = localStorage.getItem('tda-theme') || 'light';
 html.setAttribute('data-theme', saved);
-knob.textContent = saved === 'dark' ? '🌙' : '☀️';
+updateThemeAssets();
+knob.textContent = saved === 'dark' ? '⏾' : '☀︎';
 
 toggle.addEventListener('click', () => {
   const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
   html.setAttribute('data-theme', next);
-  knob.textContent = next === 'dark' ? '🌙' : '☀️';
+  updateThemeAssets();
+  knob.textContent = next === 'dark' ? '⏾' : '☀︎';
   localStorage.setItem('tda-theme', next);
 });
 </script>
