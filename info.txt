@@ -1,0 +1,27 @@
+nombre: Torres del Alba
+whatsapp: 096715952
+número: 2418 4796
+horarios: 	
+		lun-vie 7:30 a 19:30hs
+		sábados 8:30 a 19:00hs
+dirección: Gaboto 1150 esq. Maldonado, Palermo, Montevideo.
+instagram: @panaderiatorresdelalba
+reseñas:
+1.
+5 estrellas
+"Tremenda onda esta familia que atiende formidablemente, siempre con la mejor actitud y muy buenos panificados... ricos menúes para resolver los almuerzos. Somos vecinos de la cuadra y clientes de hace tiempo. Arriba esta familia trabajadora."
+2.
+5 estrellas
+"Excelente panadería y rotisería, todo comida casera muy buena con muy cálida atención. Y los pan dulces de fin de año, excelentes!"
+3.
+5 estrellas
+"Excelente servicio, todo muy rico. Recomiendo 100%. No se van a arrepentir ;)"
+4. 
+5 estrellas
+"Muy bueno. Primera vez que compro y tanto la atención como la mercadería es excelente. Va a ser mi panadería de preferencia cuando ande por este barrio."
+5. 
+5 estrellas
+"Excelente calidad, probamos las empanadas y estaban muy buenas, bien rellenas y sabrosas. Los muchachos muy amables atendiendo, que eso también es muy importante, super recomendable"
+6.
+5 estrellas
+"Los mejores bizcochos de Montevideo!! Todos los productos excelentes, difícil elegir que llevar. Excelente también para festejar un cumple o evento, los sándwiches y jesuitas, un placer. Los muchachos que atienden siempre con muy buena onda y simpatía."
